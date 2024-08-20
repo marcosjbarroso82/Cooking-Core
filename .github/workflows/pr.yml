@@ -11,9 +11,9 @@ jobs:
       db:
         image: postgres:14.2-alpine
         env:
-          POSTGRES_DB: cooking_core
-          POSTGRES_USER: cooking_core
-          POSTGRES_PASSWORD: cooking_core
+          POSTGRES_DB: crm_core
+          POSTGRES_USER: crm_core
+          POSTGRES_PASSWORD: crm_core
 
     steps:
       - uses: actions/checkout@v2
@@ -32,5 +32,5 @@ jobs:
       - name: Test
         run: make test
         env:
-          COOKING_CORE_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
-          COOKING_CORE_SETTING_LOCAL_SETTINGS_PATH: './cooking_core/project/settings/templates/settings.github.py'
+          CRM_CORE_SETTING_DATABASES: '{"default":{"HOST":"db"}}'
+          CRM_CORE_SETTING_LOCAL_SETTINGS_PATH: './crm_core/project/settings/templates/settings.github.py'

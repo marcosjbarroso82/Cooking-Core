@@ -7,7 +7,7 @@ WORKDIR /opt/project
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONPATH .
-ENV COOKING_CORE_SETTING_IN_DOCKER true
+ENV CRM_CORE_SETTING_IN_DOCKER true
 
 # Install dependencies
 RUN set -xe \
@@ -23,7 +23,7 @@ RUN poetry install --no-root
 
 # Copy project files
 COPY ["README.md", "Makefile", "./"]
-COPY cooking_core cooking_core
+COPY crm_core crm_core
 COPY local local
 
 # Expose the Django development server port (adjust if needed)
