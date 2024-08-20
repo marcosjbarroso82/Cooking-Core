@@ -29,11 +29,11 @@ INSTALLED_APPS = [
     # 'storages',
 
     # Apps
-    # 'cooking_core.accounts.apps.AccountsConfig',
-    # 'cooking_core.blocks.apps.BlocksConfig',
-    # 'cooking_core.comments.apps.CommentsConfig',
-    # 'cooking_core.config.apps.SettingsConfig',
-    # 'cooking_core.recipes.apps.RecipesConfig',
+    # 'crm_core.accounts.apps.AccountsConfig',
+    # 'crm_core.blocks.apps.BlocksConfig',
+    # 'crm_core.comments.apps.CommentsConfig',
+    # 'crm_core.config.apps.SettingsConfig',
+    # 'crm_core.recipes.apps.RecipesConfig',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'cooking_core.project.urls'
+ROOT_URLCONF = 'crm_core.project.urls'
 
 TEMPLATES = [
     {
@@ -66,15 +66,15 @@ TEMPLATES = [
     },
 ]
 
-ASGI_APPLICATION = 'cooking_core.project.asgi.application'
-WSGI_APPLICATION = 'cooking_core.project.wsgi.application'
+ASGI_APPLICATION = 'crm_core.project.asgi.application'
+WSGI_APPLICATION = 'crm_core.project.wsgi.application'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cooking_core',
-        'USER': 'cooking_core',
-        'PASSWORD': 'cooking_core',
+        'NAME': 'crm_core',
+        'USER': 'crm_core',
+        'PASSWORD': 'crm_core',
         'HOST': 'localhost',
         'PORT': '5432',
         'ATOMIC_REQUESTS': True,
